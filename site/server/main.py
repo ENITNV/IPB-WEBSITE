@@ -97,9 +97,9 @@ def one_line(value: str, limit: int) -> str:
 def build_email(req: ContactRequest) -> EmailMessage:
     fields = [
         ("Name", req.name),
-        ("Business", req.business or "—"),
+        ("Business", req.business or "Not provided"),
         ("Email", req.email),
-        ("Phone", req.phone or "—"),
+        ("Phone", req.phone or "Not provided"),
         ("Language", req.language),
     ]
     subject = f"New consultation request: {req.name}"
